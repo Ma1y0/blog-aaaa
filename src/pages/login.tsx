@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function LogInPage() {
   const { logIn } = useAuth();
-	const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +14,7 @@ export default function LogInPage() {
 
     logIn(email, password);
 
-		navigate("/")
+    navigate("/");
   };
 
   return (

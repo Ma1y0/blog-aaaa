@@ -45,7 +45,7 @@ export default function NewPostPage() {
             className="placeholder-text input input-bordered w-full"
           />
           {previewToggle ? (
-            <div className="markdown-preview h-full w-full">
+            <div className="markdown-preview h-full w-full overflow-auto">
               <MarkdownRenderer markdown={content} />
             </div>
           ) : (

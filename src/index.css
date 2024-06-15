@@ -25,5 +25,4 @@ body {
   background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
   box-shadow: none;
   border-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
-
 }
