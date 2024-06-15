@@ -13,7 +13,9 @@ export function NavBar() {
       </div>
       <div>
         {user ? (
-          <p>{user.name}</p>
+          <Link to={"/new"}>
+            <button className="btn btn-primary">Add</button>
+          </Link>
         ) : (
           <div className="flex justify-center gap-3">
             <Link to={"/login"}>

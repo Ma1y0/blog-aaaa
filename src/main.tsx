@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavBar } from "./components/navbar.tsx";
 import LogInPage from "./pages/login.tsx";
 import RegisterPage from "./pages/register.tsx";
+import NewPostPage from "./pages/newPost.tsx";
+import PostPage from "./pages/postPage.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -17,6 +19,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path="/" element={<App />} />
             <Route path="/login" element={<LogInPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/new" element={<NewPostPage />} />
+            <Route path="/post/:title" element={<PostPage />} />
           </Routes>
         </main>
       </div>

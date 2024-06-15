@@ -14,5 +14,5 @@ export function createPost(post: Post) {
 
 export function getPosts(limit: number): Post[] {
   const posts = JSON.parse(localStorage.getItem("posts") ?? "[]") as Post[];
-  return posts.slice(0, limit);
+  return posts.toReversed().slice(0, limit);
 }

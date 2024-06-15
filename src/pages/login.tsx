@@ -3,7 +3,7 @@ import { useAuth } from "../lib/user_db";
 import { useNavigate } from "react-router-dom";
 
 export default function LogInPage() {
-  const { user, logIn } = useAuth();
+  const { logIn } = useAuth();
 	const navigate = useNavigate()
 
   const [email, setEmail] = useState("");

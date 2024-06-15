@@ -3,5 +3,27 @@
 @tailwind utilities;
 
 body {
-	@apply bg-base-200
+  @apply bg-base-200;
+}
+
+.placeholder-text::placeholder {
+  @apply text-lg;
+}
+
+.markdown-preview {
+  padding-left: 1rem /* 16px */;
+  padding-right: 1rem /* 16px */;
+  padding-top: 0.5rem /* 8px */;
+  padding-bottom: 0.5rem /* 8px */;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  line-height: 2;
+  border-radius: var(--rounded-btn, 0.5rem /* 8px */);
+  border-width: 1px;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+  box-shadow: none;
+  border-color: var(--fallback-bc, oklch(var(--bc) / 0.2));
+
 }
