@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { useAuth } from "../lib/db";
+import { useAuth } from "../lib/user_db";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
-  const { user, register } = useAuth();
+  const { register, logIn } = useAuth();
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,8 +14,9 @@ export default function RegisterPage() {
     e.preventDefault();
 
     register(email, password, name);
+    logIn(email, password);
 
-    console.log(user);
+    navigate("/");
   };
 
   return (

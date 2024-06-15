@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { useAuth } from "../lib/db";
+import { useAuth } from "../lib/user_db";
+import { useNavigate } from "react-router-dom";
 
 export default function LogInPage() {
   const { user, logIn } = useAuth();
+	const navigate = useNavigate()
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +14,7 @@ export default function LogInPage() {
 
     logIn(email, password);
 
-    console.log(user);
+		navigate("/")
   };
 
   return (
