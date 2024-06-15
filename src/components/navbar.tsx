@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useAuth } from "../lib/db";
+import { useAuth } from "../lib/user_db";
 
 export function NavBar() {
   const { user } = useAuth();
